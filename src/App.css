@@ -1,8 +1,30 @@
 #root {
-  max-width: 1280px;
+  width: 100%;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  display: flex;
+  flex-direction: row;
+}
+
+@media only screen and (max-width: 600px) {
+  #root {
+    flex-direction: column;
+  }
+  .maincontent {
+    width: 75%;
+  }
+}
+
+h1 {
+  position: sticky;
+}
+
+.maincontent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
 }
 
 
