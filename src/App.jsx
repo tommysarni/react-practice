@@ -1,17 +1,15 @@
-import { useState } from 'react'
 import './App.css'
+import StateHookComponent from './challenges/StateHookComponent';
+import PracticeItem from './components/PracticeItem';
 
 function App() {
-  const [count, setCount] = useState(0)
+
 
   return (
     <>
       <h1>React Practices</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-         
+      <div>
+        <PracticeItem title={"useState Hook Example"} component={ <StateHookComponent />} description={'Boss Battle Component with enemy health state.'} />
       </div>
     </>
   )
