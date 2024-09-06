@@ -1,0 +1,91 @@
+:root {
+    --neu-mint: #10b34f;
+    --neu-mint-highlight: #1ece61;
+    --neu-mint-shadow: #0d8e3ee1;
+    --neu-mint-shadow-dark: #0b692fe1;
+}
+
+.dashboardContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    background-color: var(--neu-mint);
+    height: 300px;
+    width: 100%;
+}
+
+
+
+.toggleContainer {
+    position: relative;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    width: 20%;
+    height: 30px;
+    background: var(--neu-mint-shadow);
+    box-shadow: -5px -3px 10px var(--neu-mint-shadow-dark), 4px 3px 10px var(--neu-mint-highlight);
+}
+
+
+
+.hole {
+    border-radius: 20px;
+    position: absolute;
+    width: 100%;
+    height: 90%;
+    background: var(--neu-mint-shadow);
+    box-shadow: inset 5px 5px 10px var(--neu-mint-shadow-dark), -5px -5px 10px var(--neu-mint);
+}
+
+.switchContainer {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 20%;
+    
+}
+
+button.element {
+    width: 50%;
+    border-radius: 10px;
+    margin: 5%;
+    height: 65%;
+    animation-name: slideRight;
+    animation-duration: 1000ms;
+    animation-play-state: paused;
+}
+
+button.element.on {
+
+    animation-name: slideLeft;
+
+}
+
+@keyframes slideRight {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(75%);
+    }
+}
+
+@keyframes slideLeft {
+    from {
+        transform: translateX(75%);
+    }
+    to {
+        transform: translateX(0%);
+    }
+}
+
+
+
+.element {
+
+    background: var(--neu-mint);
+    box-shadow: 5px 2px 10px var(--neu-mint-shadow-dark), -3px -1px 10px var(--neu-mint-highlight);
+}
